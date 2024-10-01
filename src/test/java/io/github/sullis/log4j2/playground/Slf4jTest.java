@@ -29,5 +29,8 @@ public class Slf4jTest {
     assertThat(object)
         .isNotNull()
         .isInstanceOf(AsyncLogger.class);
+    AsyncLogger asyncLogger = (AsyncLogger) object;
+    assertThat(asyncLogger.getName())
+        .isEqualTo(logger.getName());
   }
 }
